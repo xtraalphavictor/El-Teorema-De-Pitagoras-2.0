@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Teorema de Pitágoras</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #b3e0ff; /* Color de fondo azul claro */
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333; /* Color del título negro */
+        }
+        input {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #4CAF50; /* Color de fondo verde */
+            color: white; /* Color del texto blanco */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049; /* Color de fondo verde más oscuro al pasar el cursor */
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333; /* Color del texto negro */
+        }
+        canvas {
+            margin-top: 20px;
+            border: 2px solid #333; /* Borde del canvas gris oscuro */
+        }
+    </style>
+</head>
+<body>
+    <h1>Juego del Teorema de Pitágoras</h1>
+    <div>
+        <label for="sideA">Lado A: </label>
+        <input type="number" id="sideA" placeholder="Ingresa el valor de A">
+    </div>
+    <div>
+        <label for="sideB">Lado B: </label>
+        <input type="number" id="sideB" placeholder="Ingresa el valor de B">
+    </div>
+    <div>
+        <label for="guess">Tu respuesta: </label>
+        <input type="number" id="guess" placeholder="Ingresa tu respuesta">
+    </div>
+    <button onclick="checkAnswer()">Comprobar respuesta</button>
+    <div id="result"></div>
+    <canvas id="triangleCanvas" width="200" height="200"></canvas>
+    
+    <script src="mi-juego.js"></script>
+</body>
+</html>
